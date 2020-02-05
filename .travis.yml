@@ -1,4 +1,4 @@
-language: python
+language: python3.7
 addons:
   sonarcloud:
     organization: "cfifua"
