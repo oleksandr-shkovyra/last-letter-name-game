@@ -58,10 +58,10 @@ def game(user_input, state):
     elif check_list_not_empty(user_input, state) and check_word_in_dict(user_input) and not check_word_in_state(user_input, state) and check_word_to_rules(user_input, state):
         return(update_state(user_input, state))
     else:
-        return('else')
+        return(False)
 
 for i in list(range(10)):
-    while game(get_user_input(),state) == 'else':
+    while game(get_user_input(),state) == False:
         print('This word incorrect. Please choose another one.')
 
     game(bot_word(get_last_letter(state[-1])),state)
